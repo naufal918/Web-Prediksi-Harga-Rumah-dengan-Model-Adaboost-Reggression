@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Kelompok 1 Muzero</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+      
+			<!-- Logo -->
+			<div class="navbar-header row">
+				<img 
+          src={{ url_for('static', filename='/images/logo_muzero 1.png') }} alt="Orbit Logo" 
+				width="50" height="50" align="left">
+				<a class="navbar-brand" href="#halamanku">&#160; Muzero 1</a>
+			</div>
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#informasi">INFORMASI</a></li>
+					<li><a href="#aplikasi">APLIKASI</a></li>
+					<li><a href="#anggotaKelompok">ANGGOTA KELOMPOK</a></li>
+        </ul>
+			</div>
+      
+		</div>
+    
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid">
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				<!-- Deskripsi Aplikasi -->
+				<h2>Price My Home</h2>
+        <h4>Prediksi Harga Rumah di Jabodetabek</h4><br> 
+				<p style="text-align: justify;text-justify: inter-word;">
+					Selamat datang di Price My Home. Aplikasi akan membantu Anda mencarikan harga rumah yang ingin Anda cari di Jabodetabek bedasarkan <i>Lokasi</i> , <i>Tipe Rumah</i> ,                <i>Tipe Listrik</i>, <i>Kamar Tidur</i> dan <i>Kamar Mandi</i>.
+					Ingin cari tahu berapa harga rumah idaman Anda? Cek di bawah ya!
+				</p>
+				<br>
+
+				<!-- Tombol Mulai -->
+				<nav id="navgo" class="navbar" style="background-color:#ffffff;z-index: 0;border:none">
+					<ul class="nav nav-pills" >
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg" href="#aplikasi" style="background-color:#28ace5">Mulai</a>
+						</li>
+					</ul>
+				</nav>
+      </div>
+
+      <div class="col-sm-6">
+        <br>
+				<br>
+				<!-- Gambar Deskripsi Aplikasi -->
+				<img 
+          style="border-radius: 1em;"
+          src={{ url_for('static', filename='/images/house_stat.png') }} width="500" ></img>
+      </div>
+    </div>
+  </div>
+		
+	
+
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-6">
+				</br>
+				<!-- Input Nilai Pengukuran dari Pengguna -->
+        <div class="row">
+  				<h3 style="margin-left: 50px;"><b>Masukkan data rumah yang ingin anda cari</b>  </h3>
+  
+          <div class="opt-group">
+            <div class="col-md-4 col-sm-6">
+              <form action="app/app.py">
+                <label for="cars">Lokasi Rumah:</label>
+                <select name="lokasi" id="lokasi" class="select-app">
+                  <optgroup label="Lokasi">
+                    <option classname ="opt" value="Lokasi">-Pilih Lokasi-</option>
+                    <option classname ="opt" value="Jakarta Pusat">Jakarta Pusat</option>
+                    <option classname ="opt" value="Jakarta Timur">Jakarta Timur</option>
+                    <option classname ="opt" value="Jakarta Selatan">Jakarta Selatan</option>
+                    <option classname ="opt" value="Jakarta Barat">Jakarta Barat</option>
+                    <option classname ="opt" value="Jakarta Utara">Jakarta Utara</option>
+                    <option classname ="opt" value="Kota Bogor">Kota Bogor</option>
+                    <option classname ="opt" value="Kabupaten Bogor">Kabupaten Bogor</option>
+                    <option classname ="opt" value="Depok">Depok</option>
+                    <option classname ="opt" value="Tangerang">Tangerang</option>
+                    <option classname ="opt" value="Kota Bekasi">Kota Bekasi</option>
+                    <option classname ="opt" value="Kabupaten Bekasi">Kabupaten Bekasi</option>
+                  </optgroup>
+                </select>
+              </form>
+            </div>
+    
+            <div class="col-md-4 col-sm-6">
+              <form action="app/app.py">
+                <label for="cars">Tipe Rumah:</label>
+                <select name="tipe_rumah" id="tipe_rumah" class="select-app">
+                  <optgroup label="Tipe_Rumah">
+                    <option classname ="opt" value="tipe_rumah">-Pilih Tipe Rumah-</option>
+                    <option classname ="opt" value="Tipe 21">Tipe 21</option>
+                    <option classname ="opt" value="Tipe 36">Tipe 36</option>
+                    <option classname ="opt" value="Tipe 45">Tipe 45</option>
+                    <option classname ="opt" value="Tipe 54">Tipe 54</option>
+                    <option classname ="opt" value="Tipe 60">Tipe 60</option>
+                    <option classname ="opt" value="Tipe 70">Tipe 70</option>
+                    <option classname ="opt" value="Tipe 90">Tipe 90</option>
+                    <option classname ="opt" value="Tipe 120">Tipe 120</option>
+                    <option classname ="opt" value="Tipe 140">Tipe 140</option>
+                  </optgroup>
+                </select>
+              </form>
+            </div>
+    
+            <div class="col-md-4 col-sm-6">
+              <form action="app/app.py">
+                <label for="cars">Tipe Listrik:</label>
+                <select name="tipe_listrik" id="tipe_listrik" class="select-app">
+                  <optgroup label="Tipe_Listrik">
+                    <option classname ="opt" value="tipe_listrik">-Pilih Tipe Listrik-</option>
+                    <option classname ="opt" value="900">900</option>
+                    <option classname ="opt" value="1300">1300</option>
+                    <option classname ="opt" value="2200">2200</option>
+                  </optgroup>
+                </select>
+              </form>
+            </div>
+    
+            <div class="col-md-4 col-sm-6">
+              <form action="app/app.py">
+                <label for="cars">Kamar Tidur:</label>
+                <select name="kamar_tidur" id="kamar_tidur" class="select-app">
+                  <optgroup label="Kamar_Tidur">
+                    <option classname ="opt" value="KT">-Pilih Kamar Tidur-</option>
+                    <option classname ="opt" value="1">1</option>
+                    <option classname ="opt" value="2">2</option>
+                    <option classname ="opt" value="3">3</option>
+                    <option classname ="opt" value="4">4</option>
+                    <option classname ="opt" value="5">5</option>
+                  </optgroup>
+                </select>
+              </form>
+            </div>
+    
+            <div class="col-md-4 col-sm-6">
+              <form action="app/app.py">
+                <label for="cars">Kamar Mandi:</label>
+                <select name="kamar_mandi" id="kamar_mandi" class="select-app">
+                  <optgroup label="Kamar_Mandi">
+                    <option classname ="opt" value="KM">-Pilih Kamar Mandi-</option>
+                    <option classname ="opt" value="1">1</option>
+                    <option classname ="opt" value="2">2</option>
+                    <option classname ="opt" value="3">3</option>
+                    <option classname ="opt" value="4">4</option>
+                    <option classname ="opt" value="5">5</option>
+                  </optgroup>
+                </select>
+              </form>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row"
+          style="
+          display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+          padding-top: 5px;
+          ">
+          <button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+    </div>
+        
+        
+      </div>
+      <div class="col-sm-6">
+        <br>
+        <h3 style="margin-left: 50px;"><b>Hasil Prediksi :   </b></h3>
+        <div id="hasil_prediksi" align="center">
+						<!-- Hasil Prediksi akan ditampilkan di sini-->
+        </div>
+        
+      </div>
+		<br>
+		<br>
+	</div>
+    
+  </div>
+
+
+  <br>
+  <br>
+  <div class="container">
+    <h3><b>Anggota Kelompok</b></h3>
+  </div>
+  
+	<div id = anggotaKelompok class="container">
+        <div class="row member-list">
+            <div class="member col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <span class="glyphicon glyphicon-user logo-small"></span>
+                    </div>
+                    <h3 class="title">Peksyaji</h3>
+                    <span class="post">Universitas Indonesia | Statistika</span>
+                    <ul class="social">
+                      <a 
+                        class="github-btn btn btn-default btn-lg fa fa-github" 
+                        href="https://github.com/Peksyaji"
+                        style="color:#28ace5 ;border-color: #28ace5;"
+                        > Github</a>
+                    </ul>
+                </div>
+            </div>
+     
+            <div class="member col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <span class="glyphicon glyphicon-user logo-small"></span>
+                    </div>
+                    <h3 class="title">Rachmat</h3>
+                    <span class="post">Universitas Gunadarma | Informatika </span>
+                    <ul class="social">
+                      <a 
+                        class="github-btn btn btn-default btn-lg fa fa-github" 
+                        href="https://github.com/Nycht1"
+                        style="color:#28ace5 ;border-color: #28ace5;"
+                        > Github</a>
+                    </ul>
+                </div>
+            </div>
+          
+            <div class="member col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+						<span class="glyphicon glyphicon-user logo-small"></span>
+                    </div>
+                    <h3 class="title">Naufal Abdullah H.W.</h3>
+                    <span class="post">Universitas Gunadarma | Informatika</span>
+                    <ul class="social">
+                        <a 
+                        class="github-btn btn btn-default btn-lg fa fa-github" href="https://github.com/naufal918"
+                        style="color:#28ace5 ;border-color: #28ace5;"
+                        > Github</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="member col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                      <span class="glyphicon glyphicon-user logo-small"></span>
+                    </div>
+                    <h3 class="title">Ratu Meira R.Z.</h3>
+                    <span class="post">Institut Pertanian Bogor | Gizi</span>
+                    <ul class="social">
+                      <a 
+                        class="github-btn btn btn-default btn-lg fa fa-github" href="#"
+                        style="color:#28ace5 ;border-color: #28ace5;"
+                        > Github</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="member col-md-4 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                      <span class="glyphicon glyphicon-user logo-small"></span>
+                    </div>
+                    <h3 class="title">Siti Denis</h3>
+                    <span class="post">Universitas Kuningan | Sistem Informasi</span>
+                    <ul class="social">
+                      <a 
+                        class="github-btn btn btn-default btn-lg fa fa-github" href="#"
+                        style="color:#28ace5 ;border-color: #28ace5;"
+                        > Github</a>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+
+	<!-- Footer -->
+	<footer class="container-fluid text-center">
+		<a href="#halamanku" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Orbit Future Academy <br> <a href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+	</footer>
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
