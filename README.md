@@ -37,7 +37,7 @@ Untuk run programnya jalankan command berikut pada shell
 
 * PEKSYAJI | Universitas Indonesia | Statistika
 * RACHMAT | Universitas Gunadarma | Informatika
-* NAUFAL | ABDULLAH H.W. | Universitas Gunadarma | Informatika
+* NAUFAL ABDULLAH H.W. | Universitas Gunadarma | Informatika
 * RATU MEIRA R.Z. | Institut Pertanian Bogor | Manajemen Industri Jasa makanan dan Gizi
 * SITI DENIS | Universitas Kuningan | Sistem Informasi
 
